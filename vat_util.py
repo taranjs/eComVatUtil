@@ -277,7 +277,7 @@ class NewYorkVatModel(UsVatModel):
 
 def getVatModelByCountry(country):
   # TODO cache/memoize model so that we do not need to init for each call
-  return _VAT_MODEL_MAP.get(country)
+  return _VAT_MODEL_MAP.get(country.upper())
   
   
 _VAT_MODEL_MAP = {
@@ -286,11 +286,11 @@ _VAT_MODEL_MAP = {
   'US': UsVatModel, 
   
   # Sub-regions (countries/states)
-  'Germany': GermanyVatModel,
+  'GERMANY': GermanyVatModel,
   'UK': UkVatModel,
-  'France': FranceVatModel,
-  'Texas': TexasVatModel,
-  'Alaska': AlaskaVatModel
+  'FRANCE': FranceVatModel,
+  'TEXAS': TexasVatModel,
+  'ALASKA': AlaskaVatModel
 }
 
 # TODO Currency conversion models for scenarios like GBP - EUR and various currencies in Africa/Asia etc.
