@@ -92,4 +92,4 @@ def run_tests():
 input = raw_input('Please enter item, amount, country (eg. milk, 2, UK): ')
 if input == "test":
   run_tests()
-  demo(input)
+demo(input)
