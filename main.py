@@ -13,7 +13,7 @@ def demo(argv):
   except ValueError as e:
     print e
   
-  input = raw_input('Please enter next item, amount, country')
+  input = raw_input('Please enter next item, amount, country: ')
   demo(input)
   
 
@@ -89,7 +89,7 @@ def run_tests():
 
 
 # Accept custom input
-input = raw_input('Please enter item, amount, country (eg. milk, 2, UK)')
+input = raw_input('Please enter item, amount, country (eg. milk, 2, UK): ')
 if input == "test":
   run_tests()
   demo(input)
